@@ -9,6 +9,25 @@ function formatValue(value: valueOfFormatValue): valueOfFormatValue {
   }
 }
 
+type filterValue<T> = Array<T>
+
+type Tobject = {
+  id: number;
+  name: string;
+  email: string;
+  isActive: boolean;
+}
+
+function filterActiveUsers(value: filterValue<Tobject>): filterValue<Tobject> {
+  const activeUser: filterValue<Tobject> = [];
+
+  value.forEach((val) => val.isActive === true && activeUser.push(val));
+
+  return activeUser;
+}
+
+
+console.log(filterActiveUsers(users));
 
 interface Book {
   title:string;
@@ -17,17 +36,14 @@ interface Book {
   isAvailable:boolean;
 }
 function printBookDetails(obj: Book) {
-  const title = obj.title;
-  const author = obj.author;
-  const published = obj.publishedYear;
-  const isAvailable = obj.isAvailable
-
   return console.log(
-    `Title: ${title}, Author: ${author}, Published: ${published}, Available: ${isAvailable ? "Yes" : "No"}`
+    `Title: ${obj.title}, Author: ${obj.author}, Published: ${
+      obj.publishedYear
+    }, Available: ${obj.isAvailable ? "Yes" : "No"}`
   );
 }
 type TuniqueValue = (string | number)[];
-function getUniqueValues(value1: TuniqueValue, value2: TuniqueValue) {
+function getUniqueValues(value1: TuniqueValue, value2: TuniqueValue):TuniqueValue {
   const bothArray = [...value1, ...value2];
   const removedDublicate: TuniqueValue = [];
 
