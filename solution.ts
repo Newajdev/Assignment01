@@ -10,7 +10,7 @@ function formatValue(value: TvalueOfFormatValue): TvalueOfFormatValue {
 }
 
 type TvalueOfLength = string | Array<string | number>;
-function getLength(value: Tlength): number {
+function getLength(value: TvalueOfLength): number {
   return value.length;
 }
 
