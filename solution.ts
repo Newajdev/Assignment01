@@ -10,17 +10,19 @@ function formatValue(value: valueOfFormatValue): valueOfFormatValue {
   }
 }
 
+type TuniqueValue = (string | number)[];
 
+function getUniqueValues(value1: TuniqueValue, value2: TuniqueValue) {
+  const bothArray = [...value1, ...value2];
+  const removedDublicate: TuniqueValue = [];
 
-
-
-
-
-
-
-
-
-
+  bothArray.forEach((val) => {
+    if (!removedDublicate.includes(val)) {
+      removedDublicate.push(val);
+    }
+  });
+  return removedDublicate;
+}
 
 type TarrayProperty<T> = Array<T>;
 type objProperty = {
@@ -29,8 +31,9 @@ type objProperty = {
   quantity: number;
   discount?: number;
 };
-
-function calculateTotalPrice(productArray: TarrayProperty<objProperty>) {
+function calculateTotalPrice(
+  productArray: TarrayProperty<objProperty>
+): number {
   return productArray.reduce((total, product) => {
     const { price, quantity, discount = 0 } = product;
 
