@@ -9,6 +9,20 @@ function formatValue(value: valueOfFormatValue): valueOfFormatValue {
     return !value;
   }
 }
+// problem 02
+
+function getLength() {
+  
+}
+// problem 03
+class Person {
+  constructor(public name: string, public age: number) {}
+
+  getDetails() {
+    return `'Name: ${this.name}, Age: ${this.age}'`;
+  }
+}
+
 
 
 // problem 04
