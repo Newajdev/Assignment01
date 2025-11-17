@@ -1,3 +1,4 @@
+//problem 01
 type valueOfFormatValue = string | number | boolean;
 function formatValue(value: valueOfFormatValue): valueOfFormatValue {
   if (typeof value === "string") {
@@ -9,15 +10,25 @@ function formatValue(value: valueOfFormatValue): valueOfFormatValue {
   }
 }
 
-type filterValue<T> = Array<T>
 
+// problem 04
+type TbookObj = {
+  title: string;
+  rating: number;
+};
+type checkRating<T> = Array<T>
+function filterByRating(books: checkRating<TbookObj>): checkRating<TbookObj> {
+  return books.filter((item) => item.rating <= 5 && item.rating >= 4);
+}
+
+//problem 05
 type Tobject = {
   id: number;
   name: string;
   email: string;
   isActive: boolean;
-}
-
+};
+type filterValue<T> = Array<T>;
 function filterActiveUsers(value: filterValue<Tobject>): filterValue<Tobject> {
   const activeUser: filterValue<Tobject> = [];
 
@@ -26,14 +37,12 @@ function filterActiveUsers(value: filterValue<Tobject>): filterValue<Tobject> {
   return activeUser;
 }
 
-
-console.log(filterActiveUsers(users));
-
+//problem 06
 interface Book {
-  title:string;
-  author:string;
-  publishedYear:number;
-  isAvailable:boolean;
+  title: string;
+  author: string;
+  publishedYear: number;
+  isAvailable: boolean;
 }
 function printBookDetails(obj: Book) {
   return console.log(
@@ -42,8 +51,13 @@ function printBookDetails(obj: Book) {
     }, Available: ${obj.isAvailable ? "Yes" : "No"}`
   );
 }
+
+//problem 07
 type TuniqueValue = (string | number)[];
-function getUniqueValues(value1: TuniqueValue, value2: TuniqueValue):TuniqueValue {
+function getUniqueValues(
+  value1: TuniqueValue,
+  value2: TuniqueValue
+): TuniqueValue {
   const bothArray = [...value1, ...value2];
   const removedDublicate: TuniqueValue = [];
 
@@ -54,6 +68,8 @@ function getUniqueValues(value1: TuniqueValue, value2: TuniqueValue):TuniqueValu
   });
   return removedDublicate;
 }
+
+// problem 08
 type TarrayProperty<T> = Array<T>;
 type objProperty = {
   name: string;
