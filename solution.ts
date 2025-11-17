@@ -1,5 +1,4 @@
 type valueOfFormatValue = string | number | boolean;
-
 function formatValue(value: valueOfFormatValue): valueOfFormatValue {
   if (typeof value === "string") {
     return value.toUpperCase();
@@ -10,8 +9,24 @@ function formatValue(value: valueOfFormatValue): valueOfFormatValue {
   }
 }
 
-type TuniqueValue = (string | number)[];
 
+interface Book {
+  title:string;
+  author:string;
+  publishedYear:number;
+  isAvailable:boolean;
+}
+function printBookDetails(obj: Book) {
+  const title = obj.title;
+  const author = obj.author;
+  const published = obj.publishedYear;
+  const isAvailable = obj.isAvailable
+
+  return console.log(
+    `Title: ${title}, Author: ${author}, Published: ${published}, Available: ${isAvailable ? "Yes" : "No"}`
+  );
+}
+type TuniqueValue = (string | number)[];
 function getUniqueValues(value1: TuniqueValue, value2: TuniqueValue) {
   const bothArray = [...value1, ...value2];
   const removedDublicate: TuniqueValue = [];
@@ -23,7 +38,6 @@ function getUniqueValues(value1: TuniqueValue, value2: TuniqueValue) {
   });
   return removedDublicate;
 }
-
 type TarrayProperty<T> = Array<T>;
 type objProperty = {
   name: string;
