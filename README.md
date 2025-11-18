@@ -35,7 +35,7 @@ type BookName = number; // error: Duplicate identifier 'BookName'
 - interface শুধু মাত্র কোন একটি object এর Shape নিধারণে ব্যবহার হয়। 
 - type যেকোন primitive or nonprimitive Type এরও ব্যবহার করা যায়।
 
-
+##
 
 # Blog 02: Provide an example of using union and intersection types in TypeScript.
 
