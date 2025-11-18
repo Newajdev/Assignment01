@@ -94,3 +94,5 @@ function calculateTotalPrice(
     return total + productTotal;
   }, 0);
 }
+
+
