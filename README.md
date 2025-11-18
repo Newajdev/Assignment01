@@ -1,6 +1,6 @@
 # Provide an example of using union and intersection types in TypeScript.
 
-## Union (|)
+- ## Union (|)
 
 Union Type ব্যবহার করা হয় যখন দুই বা তার বেশি type থেকে কেবলমাত্র একটি type ব্যবহার করার প্রয়োজন পড়ে।
 
@@ -20,7 +20,7 @@ type Admin = {
 type UserProfile = User | Admin; // UserProfile এ যেকোন একটি type গ্রাহণ যোগ্য হবে।
 ```
 
-## Intersection (&)
+- ## Intersection (&)
 
 Intersection Type ব্যবহার করা হয় যখন দুই বা তার বেশি type কে একত্রে combine করে একটি নতুন type বানাতে হয়।
 
