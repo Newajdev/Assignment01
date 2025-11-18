@@ -18,7 +18,7 @@ const textBook: Book = {
   publisherdYear: 2025
 }
 ```
-- interface ব্যবহার করলে এর Type টি open থাকে। যার অর্থ হলো interface এ যে কোন সময় নতুন property যুক্ত করা যায়।
+interface ব্যবহার করলে এর Type টি open থাকে। যার অর্থ হলো interface এ যে কোন সময় নতুন property যুক্ত করা যায়।
 
 - ## type
 ```ts
@@ -26,7 +26,7 @@ type BookName = string;
 
 type BookName = number; // error: Duplicate identifier 'BookName'
 ```
-- type ব্যবহার করলে এর মাধ্যে নতুন করে কোন property অথবা type যুক্ত করা যায় না।
+type ব্যবহার করলে এর মাধ্যে নতুন করে কোন property অথবা type যুক্ত করা যায় না।
 
 অর্থাৎ
 - type নতুন কোন property অথবা type যুক্ত করতে দেওয়া না যেখানে interface opend for marging property।
