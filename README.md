@@ -39,5 +39,5 @@ type UserAccount = User & Accountinfo; // New type যেখানে দুট�
 ```
 
 অর্থাৎ
--Union অর্থ হলো ২ টি Type এর যেকোন একটি ব্যবহার করা যাবে। UserProfile Type এ হয় Admin Type ব্যবহার হবে অথবা User Type ব্যবহার হবে।
--Intersection অর্থ ২ টি Type এর সবগুলো ব্যবহার করতে হবে। UserAccount Type এ শুধু মাত্র User অথবা Accountinfo ব্যবহার করলে error আসবে এখানে ২ টা Type ঐ ব্যবহার করতে হবে।
+- Union অর্থ হলো ২ টি Type এর যেকোন একটি ব্যবহার করা যাবে। UserProfile Type এ হয় Admin Type ব্যবহার হবে অথবা User Type ব্যবহার হবে।
+- Intersection অর্থ ২ টি Type এর সবগুলো ব্যবহার করতে হবে। UserAccount Type এ শুধু মাত্র User অথবা Accountinfo ব্যবহার করলে error আসবে এখানে ২ টা Type ঐ ব্যবহার করতে হবে।
