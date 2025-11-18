@@ -1,4 +1,4 @@
-# Provide an example of using union and intersection types in TypeScript.
+# Blog 02: Provide an example of using union and intersection types in TypeScript.
 
 - ## Union (|)
 
