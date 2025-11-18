@@ -9,18 +9,20 @@ function formatValue(value: TvalueOfFormatValue): TvalueOfFormatValue {
   }
 }
 
+
 type TvalueOfLength = string | Array<string | number>;
 function getLength(value: TvalueOfLength): number {
   return value.length;
 }
 
-class Person {
-  constructor(public name: string, public age: number) {}
 
-  getDetails(): string {
-    return `'Name: ${this.name}, Age: ${this.age}'`;
-  }
-}
+// class Person {
+//   constructor(public name: string, public age: number) {}
+
+//   getDetails(): string {
+//     return `'Name: ${this.name}, Age: ${this.age}'`;
+//   }
+// }
 
 type TbookObj = {
   title: string;
@@ -30,6 +32,7 @@ type TcheckRating<T> = Array<T>;
 function filterByRating(books: TcheckRating<TbookObj>): TcheckRating<TbookObj> {
   return books.filter((item) => item.rating <= 5 && item.rating >= 4);
 }
+
 
 type TobjectOfArray = {
   id: number;
@@ -48,6 +51,8 @@ function filterActiveUsers(
   return activeUser;
 }
 
+
+
 interface Book {
   title: string;
   author: string;
@@ -59,6 +64,9 @@ function printBookDetails(obj: Book): string {
     obj.publishedYear
   }, Available: ${obj.isAvailable ? "Yes" : "No"}`;
 }
+
+
+
 
 type TuniqueValue = Array<string | number>;
 function getUniqueValues(
@@ -75,6 +83,9 @@ function getUniqueValues(
   });
   return removedDublicate;
 }
+
+
+
 
 type TarrayProperty<T> = Array<T>;
 type TobjProperty = {
@@ -94,5 +105,7 @@ function calculateTotalPrice(
     return total + productTotal;
   }, 0);
 }
+
+
 
 
