@@ -17,7 +17,7 @@ type Admin = {
   Address: string;
 };
 
-type UserProfile = User | Admin; // UserProfile এ যেকোন একটি type এর object আসলেই তা গ্রাহণ যোগ্য হবে।
+type UserProfile = User | Admin; // UserProfile এ যেকোন একটি type গ্রাহণ যোগ্য হবে।
 ```
 
 ## Intersection (&)
@@ -35,7 +35,7 @@ type Accountinfo = {
   depositBalance: number;
 };
 
-type UserAccount = User & Accountinfo; // New type যেখানে দুটো type এর সব property নতুন টাইপে থাকবে।
+type UserAccount = User & Accountinfo; // New type যেখানে দুটো type এর সব property দিতে হবে।
 ```
 
 অর্থাৎ
