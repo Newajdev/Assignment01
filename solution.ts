@@ -16,13 +16,13 @@ function getLength(value: TvalueOfLength): number {
 }
 
 
-// class Person {
-//   constructor(public name: string, public age: number) {}
+class Person {
+  constructor(public name: string, public age: number) {}
 
-//   getDetails(): string {
-//     return `'Name: ${this.name}, Age: ${this.age}'`;
-//   }
-// }
+  getDetails(): string {
+    return `'Name: ${this.name}, Age: ${this.age}'`;
+  }
+}
 
 type TbookObj = {
   title: string;
