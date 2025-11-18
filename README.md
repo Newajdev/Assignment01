@@ -28,7 +28,7 @@ type BookName = number; // error: Duplicate identifier 'BookName'
 ```
 - type ব্যবহার করলে এর মাধ্যে নতুন করে কোন property অথবা type যুক্ত করা যায় না।
 
-* অর্থাৎ
+অর্থাৎ
 - type নতুন কোন property অথবা type যুক্ত করতে দেওয়া না যেখানে interface opend for marging property।
 
 ব্যবহারের ক্ষেত্র:
